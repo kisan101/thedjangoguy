@@ -1,0 +1,44 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+
+{% block blogs %}
+    <hr class="m-0">   
+		<!--blogs -->
+      <section class="resume-section ml-4 pl-3 pr-3 pt-3 pb-0 p-lg-5 d-flex align-items-center" id="blogs">
+
+      <div class="w-100">
+        <div class="blog w-75 mb-5">
+          <span>#PROGRAMMING</span>
+          <a href="{% static 'blog/blog_page.html' %}" class="blog_title"><h2> The magic of Python Dunder Methods! </h2></a>
+          <span style="font-size:14px;">Kisan Tamang , &nbsp;&nbsp;5 Feb 2020 &nbsp;14 min read</span><br><br> 
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias labore beatae aliquam obcaecati delectus similique, nihil odit sed placeat amet, perspiciatis dolore praesentium doloremque ut. Voluptatem cumque ipsam dolorem volu,ptatum!
+          </p>
+        </div>
+        
+        <div class="load w-50 ml-5 mb-5">
+          <span>Load More</span>
+        </div>
+
+      <footer class="bg-default pb-0 mt-5 w-75">
+       <p class="text-center font-weight-bold"><u>Browse All Topics</u></p> 
+       <p class="text-center">
+        <a class="pr-2" href="">Python</a> ·
+        <a class="pr-2" href=""> JavaScript</a> ·
+        <a class="pr-2" href="">Django</a> ·
+        <a class="pr-2" href="">UX/UI</a> ·
+        <a class="pr-2" href="">Linux</a> ·
+        <a class="pr-2" href="">Programming</a> ·
+        <a class="pr-2" href="">Web Development</a>
+        <a class="pr-2" href="">Interview</a> ·
+        <a class="pr-2" href="">Computer Science</a> ·
+        <a class="pr-2" href="">Computer Networking</a> ·
+        <a class="pr-2" href="">React</a> ·
+        <a class="pr-2" href="">React Native</a> 
+       </p>
+      </footer>
+    </div> 
+    </section>
+{% endblock blogs %}
+
+
