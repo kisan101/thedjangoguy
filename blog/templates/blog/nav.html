@@ -1,0 +1,35 @@
+{% load static %}
+ <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="index.html">
+      <span class="d-block d-lg-none">Kisan Tamang</span>
+      <span class="d-none d-lg-block">
+        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'blog/img/profile.png'%}" alt="">
+      </span>
+    </a>
+    <p style="color:#fff;;font-family: 'Kaushan Script', cursive;font-size: 20px;" class="mb-3">Kisan Tamang</p>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="{% static 'blog/index.html'%}">Blogs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="{% static 'blog/about.html#about'%}">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="{% static 'blog/about.html#skills'%}">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="{% static 'about.html#contact'%}">contact</a>
+        </li>
+      </ul>
+    </div>
+  
+      <!-- copyright footer -->
+    <div class="nav_footer">
+      <p>&copy; Kisan Tamang<br>
+      All right reserved. 2020</p>
+    </div>
+  </nav>
