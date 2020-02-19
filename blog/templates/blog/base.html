@@ -6,10 +6,20 @@
   {% include 'blog/nav.html/' %}
 
   <div class="container-fluid p-0 ml-6">  
+  	<!-- blog  -->
     {% block blogs %}
     {% endblock %}
    </div>
 
+   <!-- blog_page content -->
+{%block content%}
+{% endblock %}
+
+<!-- about page  -->
+{% block about%}
+{% endblock %}
+
    {% include 'blog/script.html/' %}
+
 </body>
 </html>
