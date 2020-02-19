@@ -11,82 +11,12 @@
       <div class="w-100">
         <div class="blog w-75  mb-5">
           <span>#PROGRAMMING</span>
-          <h2 style="font-size:45px;">Top 3 Programming Languages to Learn in 2020!</h2>
-          <span style="font-size:14px;" class="mb-4">Kisan Tamang , &nbsp;&nbsp;15 Feb 2020 &nbsp;3 min read</span>
+					<h2 style="font-size:45px;">{{post.title}}</h2>
+					<span style="font-size:14px;" class="mb-4">{{post.author}},
+							&nbsp;&nbsp;{{post.created_at}} &nbsp;{{post.read_time}} min read</span>
           <span><img src="{% static 'blog/img/coding-banner.jpeg' %}" class="w-100 mb-5 mt-4"></span>
 
-          <p class="blog_content mb-4">The most prestigious skill you can develop in today's digital world is coding. It teaches you how to think and how to solve problems.
-          </p>
-
-          <p class="blog_content mb-4">Coding teaches you to understand the foundation of the computer system. How a computer achieves its task and how it works.</p>
-
-          <p class="blog_content mb-4">There are tons of programming languages in the market. They have their own capabilities. You might be confused about which language you should choose as a beginner.</p>
-          
-          <p class="blog_content mb-4">Don't worry in this article I am going to talk about the top programming language to learn in 2020 and how they can be used to achieve your dream projects.</p>
-
-          <p class="blog_content mb-4">
-            Here is my list of top 3 programming language to learn in 2020
-          </p>
-
-          <h4 class="mt-5">1. Python</h4>
-
-          <p class="blog_content mb-4">Python is an interpreted, high level, general-purpose programming language. It can use for multiple purposes. It is easy to learn and beginner-friendly.</p>
-
-          <p class="blog_content mb-4">Here is a simple python code:
-          </p>
-
-          <pre><code class="language-python">
-         # a function to find even or odd number
-         def evenOdd(num):
-            if num % 2 == 0:
-              print(f"{num} is even")
-            else:
-              print(f"{num} is odd")
-          </code></pre>
-          
-          <p class="blog_content mb-4">Python is extremely used for Machine Learning and professional developer also uses it to build web, mobile, and desktop application as well.</p>
-
-          <p class="blog_content mb-4">But Python is not suitable for desktop and mobile applications. I will talk about a suitable language shortly. It is much popular in backend development, machine learning, data science, automation, and scripting.</p>
-
-          <p class="blog_content mb-4">According to the StackOverflow Developer Survey 2019, Python is the most wanted programming language in 2019.</p>
-
-          <img class="mb-4" src="{% static 'blog/img/python.png' %}" class="w-100 mb-5 mt-4" alt="Python tops StackOverflow Survey2020">
-
-
-
-          <p class="mb-4 blog_content">Python can be used in multiple fields like Data Science, Web Development, Machine Learning, Scripting, Software Development, Automation, etc.</p>
-
-          <p class="mb-4 blog_content">According to indeed.com, the average salary of python developers in the United States is $120k +.</p>
-
-          <p class="blog_content mb-4">Python being my personal favorite language, I would definitely suggest you get started with Python in 2020.
-          </p>
-
-          <h4 class="mt-5">2. JavaScript </h4>
-
-          <p class="blog_content mb-4">JavaScript is high level, interpreted or just-in-time compiled programming language with first-class functions. Ok, you might be thinking what the hell he is talking about. right?</p>
-
-          <p class="blog_content mb-4">Well in simple language, JavaScript is a programming language of the web. More than 75% of websites on the internet use JavaScript.
-          </p>
-
-          <p class="blog_content mb-4">
-            Here is a simple snippet of JS:
-          </p>
-
-          <pre><code class="language-python">
-              //function to find the even or odd number
-              function evenOdd(num){
-                  if(num % 2 == 0){
-                    return "Even"; 
-                  }else{
-                    return "Odd";
-                  }
-                }
-          </code></pre>
-
-          <p class="blog_content mb-4">According to the StackOverflow Developer Survey report of 2019, JavaScript is the second most wanted language.</p>
-
-          <p class="mb-4 blog_content">JavaScript has tons of amazing libraries and framework which make front-end development rapid. Here is the StackOverflow survey report of 2019 showing the top Web Frameworks.
-          </p>
+					{{post.content}}
 
           <img src="{% static 'blog/img/js-framework.png' %}" class="w-100 mb-5 mt-4">
 

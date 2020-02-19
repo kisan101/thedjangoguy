@@ -1,91 +1,94 @@
 {% extends 'blog/base.html' %}
 {% block blogs %}
 {% load static %}
-    <hr class="m-0">   
-		<!--blogs -->
-      <section class="resume-section ml-4 pl-3 pr-3 pt-3 pb-0 p-lg-5 d-flex" id="blogs">
-      <div class="w-100">
+<hr class="m-0">   
+<!--blogs -->
+<section class="resume-section ml-4 pl-3 pr-3 pt-3 pb-0 p-lg-5 d-flex" id="blogs">
+		<div class="w-100">
+				{%for post in posts%}
+				<span>#PROGRAMMING</span>
+				<div class="blog w-75 mb-5">
+						<a href="{%url 'post_detail' post.id%}" class="blog_title"><h2>{{post.title}}</h2></a>
+						<span style="font-size:14px;">{{post.author}}, &nbsp;&nbsp;{{post.created_at}}
+								&nbsp;{{post.read_time}} min read</span><br><br>
+						<p>
+						{{post.content | truncatewords:35}}
+						</p>
+				</div>
+				{%endfor%}
 
-        <div class="blog w-75 mb-5">
-          <span>#PROGRAMMING</span>
-          <a href="blog_page/" class="blog_title"><h2> The magic of Python Dunder Methods! </h2></a>
-          <span style="font-size:14px;">Kisan Tamang , &nbsp;&nbsp;5 Feb 2020 &nbsp;14 min read</span><br><br>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias labore beatae aliquam obcaecati delectus similique, nihil odit sed placeat amet, perspiciatis dolore praesentium doloremque ut. Voluptatem cumque ipsam dolorem volu,ptatum!
-          </p>
-        </div>
+				<div class="load w-50 ml-5 mb-5">
+						<span>Load More</span>
+				</div>
 
-        <div class="load w-50 ml-5 mb-5">
-          <span>Load More</span>
-        </div>
-
-      <footer class="bg-default pb-0 mt-5 w-75">
-       <p class="text-center font-weight-bold"><u>Browse All Topics</u></p> 
-       <p class="text-center">
-        <a class="pr-2" href="">Python</a> ·
-        <a class="pr-2" href=""> JavaScript</a> ·
-        <a class="pr-2" href="">Django</a> ·
-        <a class="pr-2" href="">UX/UI</a> ·
-        <a class="pr-2" href="">Linux</a> ·
-        <a class="pr-2" href="">Programming</a> ·
-        <a class="pr-2" href="">Web Development</a>
-        <a class="pr-2" href="">Interview</a> ·
-        <a class="pr-2" href="">Computer Science</a> ·
-        <a class="pr-2" href="">Computer Networking</a> ·
-        <a class="pr-2" href="">React</a> ·
-        <a class="pr-2" href="">React Native</a> 
-       </p>
-      </footer>
-    </div> 
-        <div class="w-25 m-0 text-left">
-      <h4>Categories</h4>
-      <table class="table table-hover">
-  <tbody>
-    <tr>
-      <td>JavaScript</td>
-    </tr>
-        <tr>
-      <td>Python</td>
-    </tr>
-      <tr>
-      <td>Django</td>
-    </tr>
-      <tr>
-      <td>Nodejs</td>
-    </tr>
-      <tr>
-      <td>Bootstrap</td>
-    </tr>
-      <tr>
-      <td>Linux</td>
-    </tr>
-      <tr>
-      <td>Web Development</td>
-    </tr>
-      <tr>
-      <td>Web Design</td>
-    </tr>
-      <tr>
-      <td>HTML/CSS</td>
-    </tr>
-        <tr>
-      <td>React Native</td>
-    </tr>  
-      <tr>
-      <td>React</td>
-    </tr>
-          <tr>
-      <td>AWS</td>
-    </tr>
-          <tr>
-      <td>ES6</td>
-    </tr>
-          <tr>
-      <td>Ubuntu</td>
-    </tr>
-  </tbody>
-</table> 
-    </div>
-    </section>
+				<footer class="bg-default pb-0 mt-5 w-75">
+						<p class="text-center font-weight-bold"><u>Browse All Topics</u></p> 
+						<p class="text-center">
+						<a class="pr-2" href="">Python</a> ·
+						<a class="pr-2" href=""> JavaScript</a> ·
+						<a class="pr-2" href="">Django</a> ·
+						<a class="pr-2" href="">UX/UI</a> ·
+						<a class="pr-2" href="">Linux</a> ·
+						<a class="pr-2" href="">Programming</a> ·
+						<a class="pr-2" href="">Web Development</a>
+						<a class="pr-2" href="">Interview</a> ·
+						<a class="pr-2" href="">Computer Science</a> ·
+						<a class="pr-2" href="">Computer Networking</a> ·
+						<a class="pr-2" href="">React</a> ·
+						<a class="pr-2" href="">React Native</a> 
+						</p>
+				</footer>
+		</div> 
+		<div class="w-25 m-0 text-left">
+				<h4>Categories</h4>
+				<table class="table table-hover">
+						<tbody>
+								<tr>
+										<td>JavaScript</td>
+								</tr>
+								<tr>
+										<td>Python</td>
+								</tr>
+								<tr>
+										<td>Django</td>
+								</tr>
+								<tr>
+										<td>Nodejs</td>
+								</tr>
+								<tr>
+										<td>Bootstrap</td>
+								</tr>
+								<tr>
+										<td>Linux</td>
+								</tr>
+								<tr>
+										<td>Web Development</td>
+								</tr>
+								<tr>
+										<td>Web Design</td>
+								</tr>
+								<tr>
+										<td>HTML/CSS</td>
+								</tr>
+								<tr>
+										<td>React Native</td>
+								</tr>  
+								<tr>
+										<td>React</td>
+								</tr>
+								<tr>
+										<td>AWS</td>
+								</tr>
+								<tr>
+										<td>ES6</td>
+								</tr>
+								<tr>
+										<td>Ubuntu</td>
+								</tr>
+						</tbody>
+				</table> 
+		</div>
+</section>
 
 {% endblock blogs %}
 
