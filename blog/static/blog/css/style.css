@@ -66,7 +66,6 @@ p.lead {
 
 .social-icons a:hover {
   background-color: #495057;
-  transition: .5s;
 }
 
 .dev-icons {
@@ -190,7 +189,6 @@ a:focus,
 a:active {
   color: #0a0a23;
   text-decoration: underline;
-  transition: .5s;
 }
 .load{
   border:1px solid #0a0a23;
@@ -202,7 +200,6 @@ a:active {
 .load:hover{
   background: #0a0a23;
   color:#fff;
-  transition: .5s;
 }
 
 .blog_content{

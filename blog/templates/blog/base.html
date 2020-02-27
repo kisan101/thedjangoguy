@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 {% include 'blog/head.html/' %}
@@ -19,7 +20,18 @@
 {% block about%}
 {% endblock %}
 
-   {% include 'blog/script.html/' %}
+{% include 'blog/script.html/' %}
+
+  <script type="text/javascript">
+          document.addEventListener('DOMContentLoaded', (event) => {
+		  document.querySelectorAll('pre code').forEach((block) => {
+		    hljs.highlightBlock(block);
+		  });
+		});
+  </script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="{% static '/blog/waypoint/infinite.min.js' %}"></script>
+  <script src="{% static '/blog/waypoint/jquery.waypoints.js' %}"></script>
 
 </body>
 </html>

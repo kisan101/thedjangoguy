@@ -8,7 +8,6 @@ class Post(models.Model):
         primary_key = True,
         default = uuid.uuid4,
         editable = False
-
     )
     title = models.CharField(max_length=60)
     category = models.ManyToManyField('Category',help_text="Select Categories for this Post")
@@ -22,6 +21,9 @@ class Post(models.Model):
     meta_description = models.CharField("Meta Description",max_length=255,
                                      help_text="Content for Description Meta Tag")
     read_time =  models.CharField(max_length=5,null=True,blank=True)
+
+    def get_author(self):
+        return self.author.first_name + " " + self.author.last_name
 
     def __str__(self):
         return self.title

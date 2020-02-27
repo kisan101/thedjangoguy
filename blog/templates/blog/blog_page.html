@@ -10,56 +10,54 @@
     <section class="resume-section ml-4 p-3 p-lg-5 d-flex" id="blogs">
       <div class="w-100">
         <div class="blog w-75  mb-5">
-          <span>#PROGRAMMING</span>
+          <span style="font-size: 15px;">#{{post.category}}</span>
 					<h2 style="font-size:45px;">{{post.title}}</h2>
 					<span style="font-size:14px;" class="mb-4">{{post.author}},
-							&nbsp;&nbsp;{{post.created_at}} &nbsp;{{post.read_time}} min read</span>
+							&nbsp;&nbsp;{{post.created_at| date:"d M, Y"}} &nbsp;{{post.read_time}} min read</span>
           <span><img src="{% static 'blog/img/coding-banner.jpeg' %}" class="w-100 mb-5 mt-4"></span>
 
-					{{post.content}}
+					<p class="blog_content mb-4">
+            {{post.content}}
+          </p>
+
 
           <img src="{% static 'blog/img/js-framework.png' %}" class="w-100 mb-5 mt-4">
 
-          <p class="blog_content mb-4">
-            JavaScript can be used to build web, mobile, and even desktop applications. Most used javascript libraries are React, Vue.js, jQuery, Angular, etc.
-          </p>
+<pre>
+<code class="java">
+import java.util.Scanner;
 
-          <h4 class="mt-5">3. Java </h4>
-          <p class="blog_content mb-4">
-            Java is a Compiled programming language used in enterprise application development. It is used by plenty of software companies around the world to build large scale applications.
-          </p>
-          <p class="blog_content mb-4">  
-          Java is also used to build native android applications. If you want to become an app developer, Java is right for you. It can also be used to develop websites.
-          </p>
-            <p class="blog_content mb-4">Here is Java Code to find Even or Odd number:</p>
-              <pre><code class="language-python">
-          import java.util.Scanner;
+  class OddOrEven
+  {
+    public static void main(String args[])
+    {
+      int x;
+      System.out.println("Enter an integer to check if it's odd or even");
+      Scanner in = new Scanner(System.in);
+      x = in.nextInt();
 
-            class OddOrEven
-            {
-              public static void main(String args[])
-              {
-                int x;
-                System.out.println("Enter an integer to check if it's odd or even");
-                Scanner in = new Scanner(System.in);
-                x = in.nextInt();
+      if (x % 2 == 0)
+        System.out.println("The number is even.");
+      else
+        System.out.println("The number is odd.");
+    }
+  }
+</code>
+</pre>
 
-                if (x % 2 == 0)
-                  System.out.println("The number is even.");
-                else
-                  System.out.println("The number is odd.");
-              }
-            }
-          </code></pre>
+<pre>
+  <code class="js">
+    document.addEventListener('DOMContentLoaded', (event) => {
+    document.querySelectorAll('pre code').forEach((block) => {
+      hljs.highlightBlock(block);
+    });
+    });
+  </code>
+</pre>
 
-          <p class="blog_content mb-4">Of course, it looks tedious than Python and JavaScript code mentioned earlier, but Java is a great language. There are lots of books about data structure, system design, software architect written in Java. So knowing Java is just like knowing English.</p>
 
-          <p class="blog_content mb-4">At last, my suggestion is that get started with one of the above languages. When you become comfortable with one language, it is much easier to catch the next one.</p>
-
-           <p class="blog_content mb-4"> Good Luck!!</p>
-                   
+      
         <!-- share on social section -->
-
         <div class="social-icons mb-5 mt-5">
           <span class="mb-5 pb-5"><i>Share this on!</i></span><br>
           <a href="https://www.linkedin.com/in/kisantamang/" target="_blank">
@@ -74,8 +72,8 @@
           </a>
         </div>
 
-        <!-- featured reading section -->
 
+        <!-- featured reading section -->
         <footer class="featured">
           <h3 class="mb-3"><u>Featured Reading</u></h3>
           <div class="mb-4">
