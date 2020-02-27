@@ -14,6 +14,9 @@ def about(request):
 def blog_page(request):
 	return render(request, 'blog/blog_page.html')
 
+def contact(request):
+    return render(request, 'blog/contact.html')
+
 class PostListView(ListView):
     model = Post
     template_name="blog/index.html"

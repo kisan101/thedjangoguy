@@ -20,8 +20,13 @@
 {% block about%}
 {% endblock %}
 
-{% include 'blog/script.html/' %}
+<!-- contact page -->
+{% block contact %}
+{% endblock contact %}
 
+
+
+{% include 'blog/script.html/' %}
   <script type="text/javascript">
           document.addEventListener('DOMContentLoaded', (event) => {
 		  document.querySelectorAll('pre code').forEach((block) => {
