@@ -1,7 +1,7 @@
 {% extends 'blog/base.html' %}
 {% block blogs %}
 {% load static %}
-<hr class="m-0">   
+  
 <!--blogs -->
 <section class="resume-section ml-4 pl-3 pr-3 pt-3 pb-0 p-lg-5 d-flex" id="blogs">
 		<div class="w-100">
@@ -48,7 +48,7 @@
 
 			{% for cat in categories %}
 			<tr>
-				<td>{{cat.name}}</td>
+				<td>{{cat.name}}&nbsp;&nbsp; <span style="font-size:10px;background:gray;color:#fff; padding:0px 5px 0px 5px; border-radius: 10px; text-align: right;">100</span></td>
 			</tr>
 			{% endfor %}
 		</tbody>
